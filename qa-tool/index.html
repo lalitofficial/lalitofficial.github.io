@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer Posting Aiforkids Tool</title>
+
+<!--    Style.css   -->
+<link rel="stylesheet" href="/frontend/style.css">
+    <!-- Scripts -->
+    <!-- Bootstrap 5 dark mode -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+
+</head>
+<!-- Body template -->
+
+<body class="bg-dark">
+<!--  Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<main>
+
+<!-- 1. Description Generator -->
+<!-- STEP 1 Get the Raw Description data 
+- Questions (text area)
+- Type (input)
+- Topic (input)
+- Class (input)
+
+-->
+     <!-- result -->
+     <div id="results_wrapper" class="container bg-light my-5 shadow">
+        <div class="alert py-2 text-center alert-secondary">
+            <h4>Description Output</h4>
+        </div>
+        <div id="results_content"></div>
+    </div>
+
+<div class="container py-4 mt-5 px-2 text-light card shadow bg-dark">
+    <!-- heading strip -->
+    <div class="alert-secondary alert py-2 text-center"><h4>Description Generator</h4></div>
+ 
+     <!-- form -->
+ 
+     <form method="post">
+         <div class="form-group">
+             <label for="question_list">Questions</label>
+             <textarea id="question_list" class="my-3" rows="10" cols="40"></textarea>
+         </div>
+         <div class="form-group">
+             <label for="type">Type</label>
+             <input type="text" class="my-3 form-control" id="type" name="type" placeholder="Type">
+         </div>
+         <div class="form-group">
+             <label for="topic">Topic</label>
+             <input type="text" class="my-3 form-control" id="topic" name="topic" placeholder="Topic">
+         </div>
+         <div class="form-group">
+             <label for="class">Class</label>
+             <input type="text" class="my-3 form-control" id="class" name="class" placeholder="Class">
+         </div>
+         <div class="form-group">
+             <label for="tags">Tags</label>
+             <input type="text" class="my-3 form-control" id="tags" name="tags" placeholder="tags">
+         </div>
+         <div class="form-group">
+            <label for="cat_id">Category ID</label>
+            <input type="text" class="my-3 form-control" id="cat_id" name="cat_id" placeholder="Category ID">
+        </div>
+         <button id="submit_button" class="btn btn-primary">Submit</button>
+     </form>
+ 
+ </div>
+ 
+
+    
+    <script src="/frontend/script.js"></script>
+<!--    Bulk Questions Posting from Excel sheet -->
