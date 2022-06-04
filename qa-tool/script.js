@@ -13,8 +13,10 @@ var results_content = document.getElementById('results_content');
 
 function copyToClip(str) {
     function listener(e) {
+        // remove <hr class="my-3">
+    str = str.replace(/<hr class="my-3">/g, "");
       e.clipboardData.setData("text/html", str);
-      e.clipboardData.setData("text/plain", str);
+      e.clipboardData.setData("text/plain", str.split("<br>")[0]);
       e.preventDefault();
     }
     document.addEventListener("copy", listener);
